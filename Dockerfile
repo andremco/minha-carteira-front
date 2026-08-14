@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . ./
-RUN npm run build --prod
+RUN npm run build
 
 # Use an official Nginx runtime as a parent image
 FROM nginx:alpine
